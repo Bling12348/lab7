@@ -1,7 +1,7 @@
 from typing import Dict, List
-
 import pytest
 import copy
+from unittest import mock
 
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import (
@@ -274,13 +274,23 @@ def test_given_unsorted_input_then_merged_correctly():
     )
     assert anonymizer_result.text == "<PERSON> is a person"
 
-from unittest import mock
-@mock.patch("presidio_anonymizer.anonymizer_engine.logger")
-def test_given_conflict_input_then_merged_correctly(mock_logger):
-    # replace the following `pass` line with your test implementation
-    pass
-
-
+@mock.patch("presidio_anonymizer.anonymizer_engine.logger.debug")
+def test_given_conflict_input_then_merged_correctly(mock_debug):
+    engine = AnonymizerEngine()
+    text = "I'm George Washington Square Park."
+    original_analyzer_results = [
+        RecognizerResult(start=4, end=21, entity_type="PERSON", score=1.0),
+        RecognizerResult(start=4, end=33, entity_type="LOCATION", score=1.0),
+    ]
+    anonymizer_result = engine.anonymize(
+        text,
+        original_analyzer_results
+    )
+    # Conflict resolved in favor of LOCATION
+    assert anonymizer_result.text == "I'm <LOCATION>."
+    # Ensure debug logger was called to report conflict resolution
+    mock_debug.assert_called()
+    
 def _operate(
     text: str,
     pii_entities: List[PIIEntity],
