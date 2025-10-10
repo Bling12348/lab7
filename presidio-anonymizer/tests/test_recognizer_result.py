@@ -1,5 +1,5 @@
 import pytest
-
+from unittest import mock
 from presidio_anonymizer.entities import InvalidParamError, RecognizerResult
 
 
@@ -284,11 +284,28 @@ def test_given_negative_start_or_endpoint_then_we_fail(start, end):
     ):
         create_recognizer_result("entity", 0, start, end)
 
-from unittest import mock
 @mock.patch.object(RecognizerResult, "logger")
 def test_logger(mock_logger):
-    # replace the following line of `pass` with your test implementation
-    pass
+    # Arrange
+    entity_type = "PERSON"
+    start = 0
+    end = 5
+    score = 0.95
+
+    # Act – this calls __init__, which triggers logger.info inside
+    result = RecognizerResult(entity_type=entity_type, start=start, end=end, score=score)
+
+    # Assert the logger was called
+    mock_logger.info.assert_called_once()
+
+    # Extract the actual log message
+    log_message = mock_logger.info.call_args[0][0]
+
+    # Assert expected content in the log message
+    assert entity_type in log_message
+    assert str(start) in log_message
+    assert str(end) in log_message
+    assert f"{score:.2f}" in log_message
 
 def create_recognizer_result(entity_type: str, score: float, start: int, end: int):
     data = {"entity_type": entity_type, "score": score, "start": start, "end": end}
