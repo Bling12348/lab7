@@ -1,12 +1,14 @@
 Branches in this repo (with details):
 
-- dependabot/docker/presidio-anonymizer/python-3.14-windowsservercore
-  SHA: 0c0c337a146792778c3c0b8257bb8aa14cdcbcd5
-  Commits: 3
+- dependabot/docker/presidio-anonymizer/python-3.15.0a5-windowsservercore
+  SHA: 187745a1fbfa806349674a3386874707561f5c2c
+  Commits: 10
   Recent commits:
-    0c0c337 | Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> | Committer: GitHub <noreply@github.com> | Date: 2025-10-10T00:19:41Z | Bump python in /presidio-anonymizer
-    682f876 | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T00:19:03Z | Auto-update branch-info.txt
-    6b4239f | Author: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Committer: GitHub <noreply@github.com> | Date: 2025-10-09T20:18:52-04:00 | Initial commit
+    187745a | Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> | Committer: GitHub <noreply@github.com> | Date: 2026-02-01T18:41:41Z | Bump python in /presidio-anonymizer
+    0874a6f | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-11-24T19:24:45Z | Auto-update branch-info.txt
+    2110bbc | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T01:31:16Z | Auto-update branch-info.txt
+    b1fea25 | Author: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Committer: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Date: 2025-10-10T01:30:03Z | Merge branch 'lab7'
+    58c1eae | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T01:29:54Z | Auto-update branch-info.txt
 - dependabot/github_actions/actions/checkout-6
   SHA: 7519c573349e3f5053047557f49b5fa03a0e8b4a
   Commits: 9
@@ -26,11 +28,11 @@ Branches in this repo (with details):
     682f876 | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T00:19:03Z | Auto-update branch-info.txt
     6b4239f | Author: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Committer: GitHub <noreply@github.com> | Date: 2025-10-09T20:18:52-04:00 | Initial commit
 - main
-  SHA: 2110bbc6df60487f0d77cd28f7246bbdcccca1e4
-  Commits: 8
+  SHA: 0874a6f586de1b6917ba6db61fd44964348089b8
+  Commits: 9
   Recent commits:
+    0874a6f | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-11-24T19:24:45Z | Auto-update branch-info.txt
     2110bbc | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T01:31:16Z | Auto-update branch-info.txt
     b1fea25 | Author: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Committer: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Date: 2025-10-10T01:30:03Z | Merge branch 'lab7'
     58c1eae | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T01:29:54Z | Auto-update branch-info.txt
     cb1a249 | Author: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Committer: Tony Schembri <230397822+Bling12348@users.noreply.github.com> | Date: 2025-10-10T01:29:41Z | Complete tests
-    07238d5 | Author: GitHub Actions <actions@github.com> | Committer: GitHub Actions <actions@github.com> | Date: 2025-10-10T00:19:50Z | Auto-update branch-info.txt
